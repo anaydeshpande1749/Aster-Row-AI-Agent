@@ -1,0 +1,692 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    background: #f7f7f5;
+
+    color: #20201e;
+
+    min-height: 100vh;
+
+}
+
+
+/* =====================================================
+   APP SHELL
+===================================================== */
+
+.app-shell {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.topbar {
+
+    height: 72px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e7e7e3;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 42px;
+
+}
+
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+
+.brand-mark {
+
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 10px;
+
+    background: #20201e;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: 700;
+
+    font-size: 18px;
+
+}
+
+
+.brand h1 {
+
+    font-family: Georgia, serif;
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+}
+
+
+.brand p {
+
+    font-size: 12px;
+
+    color: #8a8a84;
+
+    margin-top: 2px;
+
+}
+
+
+.status {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 12px;
+
+    color: #6e6e68;
+
+}
+
+
+.status-dot {
+
+    width: 8px;
+
+    height: 8px;
+
+    background: #4e9f68;
+
+    border-radius: 50%;
+
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.main-container {
+
+    width: min(900px, 92%);
+
+    margin: 0 auto;
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+/* =====================================================
+   WELCOME
+===================================================== */
+
+.welcome-section {
+
+    text-align: center;
+
+    padding: 80px 20px 40px;
+
+}
+
+
+.welcome-icon {
+
+    width: 54px;
+
+    height: 54px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 16px;
+
+    background: #ecece8;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 26px;
+
+}
+
+
+.welcome-section h2 {
+
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+
+    font-weight: 500;
+
+    letter-spacing: -1px;
+
+}
+
+
+.welcome-section p {
+
+    margin-top: 12px;
+
+    color: #777771;
+
+    font-size: 15px;
+
+}
+
+
+/* =====================================================
+   SUGGESTIONS
+===================================================== */
+
+.suggestions {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+
+    max-width: 600px;
+
+    margin: 30px auto 0;
+
+}
+
+
+.suggestion {
+
+    background: #ffffff;
+
+    border: 1px solid #e4e4df;
+
+    border-radius: 12px;
+
+    padding: 14px 16px;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    color: #30302d;
+
+    font-size: 13px;
+
+    transition:
+        transform 0.15s ease,
+        border-color 0.15s ease,
+        box-shadow 0.15s ease;
+
+}
+
+
+.suggestion span {
+
+    margin-right: 8px;
+
+}
+
+
+.suggestion:hover {
+
+    transform: translateY(-1px);
+
+    border-color: #bdbdb6;
+
+    box-shadow:
+        0 4px 14px rgba(0, 0, 0, 0.05);
+
+}
+
+
+/* =====================================================
+   CHAT
+===================================================== */
+
+.chat-container {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 22px;
+
+    padding: 20px 0 30px;
+
+}
+
+
+.message {
+
+    display: flex;
+
+    flex-direction: column;
+
+    max-width: 78%;
+
+}
+
+
+.message.user {
+
+    align-self: flex-end;
+
+    align-items: flex-end;
+
+}
+
+
+.message.assistant {
+
+    align-self: flex-start;
+
+    align-items: flex-start;
+
+}
+
+
+.message-label {
+
+    font-size: 11px;
+
+    color: #888882;
+
+    margin-bottom: 6px;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+
+}
+
+
+.message-bubble {
+
+    padding: 14px 17px;
+
+    border-radius: 16px;
+
+    font-size: 14px;
+
+    line-height: 1.65;
+
+    white-space: pre-wrap;
+
+}
+
+
+.user .message-bubble {
+
+    background: #20201e;
+
+    color: white;
+
+    border-bottom-right-radius: 5px;
+
+}
+
+
+.assistant .message-bubble {
+
+    background: white;
+
+    border: 1px solid #e3e3de;
+
+    border-bottom-left-radius: 5px;
+
+}
+
+
+/* =====================================================
+   METADATA
+===================================================== */
+
+.metadata {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-top: 9px;
+
+}
+
+
+.meta {
+
+    font-size: 10px;
+
+    border: 1px solid #deded8;
+
+    background: #f4f4f1;
+
+    color: #666660;
+
+    border-radius: 20px;
+
+    padding: 4px 8px;
+
+}
+
+
+.meta.success {
+
+    background: #edf7ef;
+
+    border-color: #cde5d1;
+
+    color: #3d754a;
+
+}
+
+
+.meta.warning {
+
+    background: #fff5e8;
+
+    border-color: #efd9b8;
+
+    color: #8b6028;
+
+}
+
+
+/* =====================================================
+   INPUT
+===================================================== */
+
+.input-area {
+
+    width: min(900px, 92%);
+
+    margin: 0 auto;
+
+    padding: 12px 0 25px;
+
+}
+
+
+.input-wrapper {
+
+    background: white;
+
+    border: 1px solid #dcdcd6;
+
+    border-radius: 16px;
+
+    padding: 8px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.05);
+
+}
+
+
+textarea {
+
+    flex: 1;
+
+    border: none;
+
+    outline: none;
+
+    resize: none;
+
+    padding: 11px 12px;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    background: transparent;
+
+    max-height: 130px;
+
+}
+
+
+textarea::placeholder {
+
+    color: #a1a19b;
+
+}
+
+
+#sendButton {
+
+    border: none;
+
+    background: #20201e;
+
+    color: white;
+
+    border-radius: 11px;
+
+    padding: 11px 18px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    min-width: 65px;
+
+}
+
+
+#sendButton:hover {
+
+    background: #33332f;
+
+}
+
+
+#sendButton:disabled {
+
+    opacity: 0.55;
+
+    cursor: not-allowed;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer-row {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 8px;
+
+    padding: 0 4px;
+
+}
+
+
+.footer-row span {
+
+    font-size: 10px;
+
+    color: #9a9a94;
+
+}
+
+
+.reset-button {
+
+    background: transparent;
+
+    border: none;
+
+    color: #777771;
+
+    cursor: pointer;
+
+    font-size: 11px;
+
+}
+
+
+.reset-button:hover {
+
+    color: #20201e;
+
+}
+
+
+/* =====================================================
+   SPINNER
+===================================================== */
+
+.spinner {
+
+    display: inline-block;
+
+    width: 14px;
+
+    height: 14px;
+
+    border: 2px solid rgba(255, 255, 255, 0.35);
+
+    border-top-color: white;
+
+    border-radius: 50%;
+
+    animation: spin 0.7s linear infinite;
+
+}
+
+
+@keyframes spin {
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+.hidden {
+
+    display: none;
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 650px) {
+
+    .topbar {
+
+        padding: 0 18px;
+
+    }
+
+
+    .status {
+
+        display: none;
+
+    }
+
+
+    .welcome-section {
+
+        padding-top: 55px;
+
+    }
+
+
+    .welcome-section h2 {
+
+        font-size: 32px;
+
+    }
+
+
+    .suggestions {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .message {
+
+        max-width: 90%;
+
+    }
+
+}

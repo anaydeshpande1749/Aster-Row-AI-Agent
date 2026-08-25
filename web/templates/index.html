@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Aster & Row | AI Support</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+    <div class="app-shell">
+
+
+        <!-- =========================================
+             HEADER
+        ========================================== -->
+
+        <header class="topbar">
+
+            <div class="brand">
+
+                <div class="brand-mark">
+                    A
+                </div>
+
+                <div>
+
+                    <h1>Aster & Row</h1>
+
+                    <p>AI Customer Support</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="status">
+
+                <span class="status-dot"></span>
+
+                <span>AI Agent Online</span>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =========================================
+             MAIN
+        ========================================== -->
+
+        <main class="main-container">
+
+
+            <!-- Hero -->
+
+            <section
+                class="welcome-section"
+                id="welcomeSection"
+            >
+
+                <div class="welcome-icon">
+                    ✦
+                </div>
+
+                <h2>
+                    How can we help?
+                </h2>
+
+                <p>
+                    Ask about orders, returns, shipping,
+                    products, or our policies.
+                </p>
+
+
+                <!-- Suggested questions -->
+
+                <div class="suggestions">
+
+                    <button
+                        class="suggestion"
+                        data-question="What is the return policy for an unused backpack?"
+                    >
+                        <span>↩</span>
+                        Return policy
+                    </button>
+
+
+                    <button
+                        class="suggestion"
+                        data-question="Where is order ORD-1007?"
+                    >
+                        <span>📦</span>
+                        Track an order
+                    </button>
+
+
+                    <button
+                        class="suggestion"
+                        data-question="Can I put the Breeze Tumbler in the dishwasher?"
+                    >
+                        <span>◉</span>
+                        Product question
+                    </button>
+
+
+                    <button
+                        class="suggestion"
+                        data-question="Can you ship an Atlas Weekender to Germany?"
+                    >
+                        <span>✈</span>
+                        Shipping
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =====================================
+                 CHAT
+            ====================================== -->
+
+            <section
+                class="chat-container"
+                id="chatContainer"
+            >
+
+            </section>
+
+
+        </main>
+
+
+
+        <!-- =========================================
+             INPUT AREA
+        ========================================== -->
+
+        <footer class="input-area">
+
+            <form id="chatForm">
+
+                <div class="input-wrapper">
+
+                    <textarea
+                        id="questionInput"
+                        rows="1"
+                        placeholder="Ask Aster & Row anything..."
+                        autocomplete="off"
+                    ></textarea>
+
+
+                    <button
+                        type="submit"
+                        id="sendButton"
+                        aria-label="Send message"
+                    >
+
+                        <span id="sendText">
+                            Send
+                        </span>
+
+                        <span
+                            id="loadingSpinner"
+                            class="spinner hidden"
+                        ></span>
+
+                    </button>
+
+                </div>
+
+            </form>
+
+
+            <div class="footer-row">
+
+                <span>
+                    AI-generated responses may require human review.
+                </span>
+
+
+                <button
+                    id="newConversation"
+                    class="reset-button"
+                    type="button"
+                >
+                    ↻ New conversation
+                </button>
+
+            </div>
+
+        </footer>
+
+
+    </div>
+
+
+    <script
+        src="{{ url_for('static', filename='script.js') }}"
+    ></script>
+
+</body>
+
+</html>

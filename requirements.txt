@@ -1,0 +1,11 @@
+langchain-core
+langchain-text-splitters
+langchain-huggingface
+langchain-chroma
+langchain-google-genai
+sentence-transformers
+pyyaml
+python-dotenv
+google-genai
+pytest
+Flask
