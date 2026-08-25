@@ -31,12 +31,12 @@ This project is built around fixing exactly those four failure modes rather than
 
 ## 🎬 Demo
 
-*(2–4 min GIF/video — replace with the actual link before submitting)*
-
-<video controls >
+<video controls width="800">
   <source src="./assets/video/Demo-video.mp4" type="video/mp4">
+  Your browser does not support the video tag.
 </video>
 
+[![Watch Demo](https://img.shields.io/badge/Google%20Drive-Watch%20Demo%20Video-4285F4?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/file/d/1w_4pd0eVaNjaDTNipD63Px-C5Yj5GiB7/view?usp=sharing)
 
 The recording covers, in order:
 1. A knowledge-base question with cited sources
@@ -218,7 +218,7 @@ GEMINI_API_KEY=
 
 # Optional overrides
 CHROMA_PERSIST_DIR=storage/chroma
-GEMINI_MODEL=gemini-1.5-flash
+GEMINI_MODEL=gemini-3.6-flash
 ```
 
 ### 5. Build the local vector index
